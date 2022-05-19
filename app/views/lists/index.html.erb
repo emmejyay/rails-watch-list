@@ -1,10 +1,17 @@
-<br>
-<h1>All Lists</h1>
-<br>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP3LTEunoXwfZOaFQsKA3MRMr4MNim0eC2XQ&usqp=CAU">
+  <div class="container">
+    <h1>Movie Lists</h1>
+    <p>Create lists of movies any way you like!</p>
+  </div>
+</div>
+<div>
+<div class="card-category">
+  <h2>Your Lists</h2>
+</div>
+<div class="cards">
   <%@lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/200/300)">
+      <%= link_to list.name, list_path(list) %>
+    </div>
   <% end %>
-</ul>
-
-<%= link_to "Create a new list!", new_list_path, class: "btn btn-primary" %>
+</div>

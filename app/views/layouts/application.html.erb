@@ -11,6 +11,35 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container-fluid">
+        <%= link_to "#", class: "navbar-brand" do %>
+          <%= image_tag "data:image/png;base64,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" %>
+        <% end %>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <%# if user_signed_in? %>
+              <li class="nav-item active">
+                <%= link_to "All Lists", lists_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Create New List", new_list_path, class: "nav-link" %>
+              </li>
+            <%# else %>
+              <!--li class="nav-item"-->
+                <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+              <!--/li-->
+            <%# end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

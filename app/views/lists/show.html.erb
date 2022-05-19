@@ -1,6 +1,17 @@
 <br>
 <h1><%= @list.name %></h1>
 <br>
+<ul>
+  <% @list.movies.each do |movie| %>
+  <li><%= movie.title %></li>
+  <% end %>
+</ul>
+<br>
+<br>
+<%= link_to "Add Movie", new_list_bookmark_path(@list), class: "btn btn-secondary" %>
+<br>
+<%# <br> %>
+<%# <%= link_to "Delete Movie", bookmark_path(@bookmark), class: "btn btn-warning" %>
 <br>
 <br>
 <%= link_to "Back to All Lists", lists_path, class: "btn btn-primary" %>
